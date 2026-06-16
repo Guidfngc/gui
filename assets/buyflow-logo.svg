@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" role="img" aria-label="BuyFlow">
+  <defs>
+    <linearGradient id="mark" x1="55" y1="32" x2="170" y2="178" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff2f68"/>
+      <stop offset="0.52" stop-color="#ff2f68"/>
+      <stop offset="1" stop-color="#ff9f2f"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="495" y1="78" x2="745" y2="146" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff2f68"/>
+      <stop offset="0.42" stop-color="#ff4c48"/>
+      <stop offset="1" stop-color="#ff9f2f"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1 0 0 0 0 .22 0 0 0 0 .45 0 0 0 .55 0" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="760" height="210" fill="none"/>
+  <g filter="url(#glow)">
+    <path d="M35 58C35 42 47 31 64 31h126c43 0 72 26 72 64s-29 64-72 64H94c-34 0-54 11-65 35 0-50 36-72 72-72h97l-40-33H72c-21 0-37-8-37-31Z" fill="url(#mark)"/>
+    <path d="M32 138c11-29 34-43 67-43h95l-39-33H79c-26 0-47-10-47-35 0 0-6 32 10 53 13 17 31 24 56 24h96l-39 34H87c-27 0-45 8-55 30v-30Z" fill="url(#mark)" opacity=".98"/>
+  </g>
+  <g filter="url(#soft)" font-family="Inter, Arial, Helvetica, sans-serif" font-size="98" font-weight="900" letter-spacing="-6">
+    <text x="310" y="133" fill="#fff">Buy</text>
+    <text x="495" y="133" fill="url(#flow)">Flow</text>
+  </g>
+</svg>
